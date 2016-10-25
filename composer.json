@@ -1,0 +1,15 @@
+{
+  "name": "institucion/nombre-proyecto",
+  "description": "",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.siu.edu.ar"
+    }
+  ],
+  "require": {
+    "siu-toba/framework": "2.7.x-dev"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
