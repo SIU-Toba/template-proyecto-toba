@@ -4,10 +4,7 @@
  * Hay que tener instalado [Composer](https://getcomposer.org/)
 
 ## Descarga
- * Ejecutar  
-   ```
-composer create-project siu-toba/template-proyecto-toba <CARPETA DESTINO>
-   ```
+ * Descargar este proyecto como zip (botón verde 'clone or download'). Luego extraerlo dentro de una carpeta deseada
  * Modificar el archivo ```composer.json``` reemplazando la entrada ```name``` con lo que corresponda.
  * Ejecutar en la carpeta el comando  
    ```
