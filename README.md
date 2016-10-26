@@ -6,7 +6,7 @@
 ## Descarga
  * Ejecutar
 ```
-  php composer.phar create-project siu-toba/template-proyecto-vacio <CARPETA DESTINO>
+  php composer.phar create-project siu-toba/template-proyecto-toba <CARPETA DESTINO>
 ```
  * Modificar el archivo ```composer.json``` reemplazando la entrada ```name``` con lo que corresponda.
  * Ejecutar en la carpeta el comando
