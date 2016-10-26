@@ -31,17 +31,19 @@ bin/crear-proyecto.sh
    ```
 service apache2 reload
    ```
- * Salir del contenedor y en el directorio de la aplicación (donde está ```proyecto.ini```) ejecutar:  
-   ```
-sudo chown -R $USER:$USER metadatos php temp www proyecto.ini
-   ```
- * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/2.7```.
+ * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/2.7```. Las credenciales por defecto son ```toba:toba```
  
     Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
     
     La estructura del proyecto Toba nuevo quedó en la raíz.
 
 ### Trabajando
+#### Permisos de los archivos
+Por defecto el contenedor crea los archivos de código con permisos de root, esto puede ser molesto. Dentro del directorio del proyecto (fuera del contenedor) ejecutar esto por única vez para poder editar tranquilamente los archivos:
+```
+sudo chown -R $USER:$USER metadatos php temp www proyecto.ini
+```
+Una vez hecho esto se puede levantar con cualquier IDE la carpeta del proyecto y trabajar normalmente.
 #### Carpeta de instalación de Toba
 Por defecto la carpeta de instalación queda montada en la carpeta llamada ```instalacion``` en la raíz del proyecto.
  Si se desea cambiar esto se hace desde la sección ```volumes``` del ```docker-compose.yml```
