@@ -27,20 +27,22 @@
   docker exec -it <NOMBRE PROYECTO> bash
 ```
  * Ejecutar el comando
- ```
+```
    bin/crear-proyecto.sh
- ```
+```
  * Reiniciar apache
- ```
+```
    service apache2 reload
- ```
+```
  * Salir del contenedor y en el directorio de la aplicación (donde está ```proyecto.ini```) ejecutar:
- ```
+```
    sudo chown -R $USER:$USER metadatos php temp www proyecto.ini
- ```
- * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/2.7```. Recomendamos en este
- punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran
-  en el archivo ```.gitignore```, si se utiliza Git no es necesario.
+```
+ * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/2.7```.
+ 
+    Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
+    
+    La estructura del proyecto Toba nuevo quedó en la raíz.
 
 ### Trabajando
 #### Carpeta de instalación de Toba
