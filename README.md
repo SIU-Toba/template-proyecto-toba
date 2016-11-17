@@ -56,10 +56,10 @@ interacción con el CVS) desde dentro del contenedor del proyecto. Para acceder 
 docker exec -it <NOMBRE PROYECTO> bash
 ```
 
-## Instalación en Maquina Host
- * Instalar [Apache](https://help.ubuntu.com/lts/serverguide/httpd.html) o manualmente (https://httpd.apache.org/docs/current/es/install.html)
- * Instalar [PHP] (http://php.net/manual/en/install.unix.debian.php) o manualmente (http://php.net/manual/es/install.php)
- * Instalar [Postgres] (https://www.postgresql.org/download/linux/ubuntu/) o manualmente (https://www.postgresql.org/docs/current/static/install-procedure.html)
+## Instalación en Máquina Host (Ubuntu)
+ * Instalar [Apache](https://help.ubuntu.com/lts/serverguide/httpd.html) o [manualmente](https://httpd.apache.org/docs/current/es/install.html)
+ * Instalar [PHP] (http://php.net/manual/en/install.unix.debian.php) o [manualmente] (http://php.net/manual/es/install.php)
+ * Instalar [Postgres] (https://www.postgresql.org/download/linux/ubuntu/) o [manualmente] (https://www.postgresql.org/docs/current/static/install-procedure.html)
  * Instalar [Subversion](https://subversion.apache.org/packages.html) y/o [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
  * Instalar [Graphviz](http://graphviz.org/Download..php)
  * Editar el/los archivos de configuracion de PHP(php.ini) de acuerdo a la plataforma y cambiar las siguientes configuraciones:
@@ -78,13 +78,24 @@ docker exec -it <NOMBRE PROYECTO> bash
  * Instalar o activar las siguientes extensiones de PHP
  
    ```
-    extension=php_pdo.dll
-    extension=php_pdo_pgsql.dll
-    extension=php_mbstring.dll
+    extension=curl.so
+    extension=gd.so
+    extension=json.so
+    extension=pdo.so
+    extension=pdo_pgsql.so
+    extension=mbstring.so
+    extension=mcrypt.so
+    extension=phar.so
+    extension=xsl.so
+    extension=xmlwriter.so
+    extension=xmlreader.so
+    extension=zip.so
+    extension=zlib.so        
    ```
- * Ejecutar el comando 
+ * Ejecutar los comandos 
  
    ```
+    export TOBA_INSTANCIA=desarrollo    
     bin/toba instalacion instalar
    ```     
    E indicar los valores para los parametros solicitados
