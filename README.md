@@ -2,6 +2,7 @@
 
 ## Prerequisitos
  * Hay que tener instalado [Composer](https://getcomposer.org/)
+ * Hay que tener instalado [Bower](https://bower.io/)
 
 ## Descarga
  * Descargar este proyecto como zip (botón verde 'clone or download'). Luego extraerlo dentro de una carpeta deseada
@@ -55,4 +56,77 @@ interacción con el CVS) desde dentro del contenedor del proyecto. Para acceder 
 docker exec -it <NOMBRE PROYECTO> bash
 ```
 
+## Instalación en Maquina Host
+ * Instalar [Apache](https://help.ubuntu.com/lts/serverguide/httpd.html) o manualmente (https://httpd.apache.org/docs/current/es/install.html)
+ * Instalar [PHP] (http://php.net/manual/en/install.unix.debian.php) o manualmente (http://php.net/manual/es/install.php)
+ * Instalar [Postgres] (https://www.postgresql.org/download/linux/ubuntu/) o manualmente (https://www.postgresql.org/docs/current/static/install-procedure.html)
+ * Instalar [Subversion](https://subversion.apache.org/packages.html) y/o [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ * Instalar [Graphviz](http://graphviz.org/Download..php)
+ * Editar el/los archivos de configuracion de PHP(php.ini) de acuerdo a la plataforma y cambiar las siguientes configuraciones:
+   ```
+    #Mínimos
+    magic_quotes_gpc  =  Off
+    magic_quotes_runtime  =  Off
 
+    #Recomendados
+    error_reporting  =  E_ALL           #Solo para desarrollo
+    display_errors = On                 #Solo para desarrollo
+    memory_limit = 512M
+    post_max_size = 8 M
+    upload_max_filesize = 8 M
+   ```
+ * Instalar o activar las siguientes extensiones de PHP
+ 
+   ```
+    extension=php_pdo.dll
+    extension=php_pdo_pgsql.dll
+    extension=php_mbstring.dll
+   ```
+ * Ejecutar el comando 
+ 
+   ```
+    bin/toba instalacion instalar
+   ```     
+   E indicar los valores para los parametros solicitados
+
+##Creación del proyecto
+ * Ejecutar el comando
+ 
+   ```
+    bin/toba proyecto crear -p <NOMBRE PROYECTO> -d `pwd`
+   ```
+ * Crear un link simbolico al archivo ``instalacion/toba.conf`` para que Apache pueda servirlo
+ 
+   ```
+    sudo ln -s `pwd`/instalacion/toba.conf  /etc/apache2/sites-available/<NOMBRE PROYECTO>.conf
+   ```
+ * Activar el sitio en la configuración de Apache  
+ 
+   ```
+    sudo a2ensite <NOMBRE PROYECTO>
+   ```
+ * Reiniciar apache  
+ 
+   ```
+    service apache2 reload
+   ```   
+ * Listo, el proyecto ya se puede acceder desde la url ```http://localhost/toba_editor/2.7```.  
+    Las credenciales son las que haya incluido en los parametros solicitados
+ 
+    Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
+    
+    La estructura del proyecto Toba nuevo quedó en la raíz.
+
+### Trabajando
+#### Carpeta de instalación de Toba
+Por defecto la carpeta de instalación queda montada en la carpeta llamada ```instalacion``` en la raíz del proyecto.
+
+#### Comandos administrativos
+Para persistir las modificaciones realizadas con toba_editor, se recomienda correr los comandos administrativos en interacción con el CVS
+  * Ejecutar al abrir una nueva consola el comando 
+  
+    ```
+     . instalacion/entorno_toba.env
+    ```
+  Luego de ello acceder normalmente a los comandos administrativos, mediante el comando lanzador `toba`. 
+  
