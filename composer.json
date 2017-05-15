@@ -8,7 +8,7 @@
     }
   ],
   "require": {
-    "siu-toba/framework": "2.7.x-dev"
+    "siu-toba/framework": "^3.0"    
   },
   "minimum-stability": "dev",
   "prefer-stable": true
