@@ -32,7 +32,7 @@ bin/crear-proyecto.sh
 ```shell
 service apache2 reload
 ```
- * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/2.7```.  
+ * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/3.0```.  
     Las credenciales por defecto son ```toba:toba```
  
     Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
@@ -121,7 +121,7 @@ docker exec -it <NOMBRE PROYECTO> bash
    ```shell
     service apache2 reload
    ```   
- * Listo, el proyecto ya se puede acceder desde la url ```http://localhost/toba_editor/2.7```.  
+ * Listo, el proyecto ya se puede acceder desde la url ```http://localhost/toba_editor/3.0```.  
     Las credenciales son las que haya incluido en los parametros solicitados
  
     Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
