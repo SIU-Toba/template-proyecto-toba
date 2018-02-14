@@ -10,6 +10,9 @@
   "require": {
     "siu-toba/framework": "^3.0"    
   },
+  "config": {
+     "bin-dir": "./bin" 
+  }
   "scripts": {
      "post-install-cmd": [
            "composer run-script post-install-cmd -d ./vendor/siu-toba/framework/"
