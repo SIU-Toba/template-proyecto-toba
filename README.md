@@ -2,7 +2,7 @@
 
 ## Prerequisitos
  * Hay que tener instalado [Composer](https://getcomposer.org/)
- * Hay que tener instalado [Bower](https://bower.io/)
+ * Hay que tener instalado [Bower](https://bower.io/) (v1.8.4 o superior)
 
 ## Descarga
  * Descargar este proyecto como zip (botón verde 'clone or download'). Luego extraerlo dentro de una carpeta deseada
