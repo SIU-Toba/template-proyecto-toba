@@ -1,5 +1,5 @@
 pg:
-  image: postgres:9.4
+  image: postgres:11
   ports:
    - "7432:5432"
   container_name: pg
