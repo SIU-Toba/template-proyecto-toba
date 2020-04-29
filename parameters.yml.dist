@@ -1,0 +1,18 @@
+parameters:
+# Parametros de la instalacion
+    toba-id-desarrollador: <ID ASIGNADO>
+    toba-tipo-instalacion: <0=DESARROLLO, 1=PRODUCCION>
+    toba-nombre-instalacion: <NOMBRE RECONOCIBLE>
+
+# Parametros de la base de datos o instancia
+    toba-base-profile: <IP MOTOR>
+    toba-base-usuario: <USUARIO BASE>
+    toba-base-nombre: <NOMBRE BASE>
+    toba-base-puerto: <PUERTO MOTOR>
+
+# Ruta absoluta a los archivos con las claves en texto plano
+    toba-archivo-clave-bd: <PATH ARCHIVO CON CLAVE BD>
+    toba-archivo-clave-admin: <PATH ARCHIVO CON CLAVE ADMIN>
+
+# Identificador del usuario administrador de la instalacion
+    toba-usuario-admin: <ID USUARIO ADMINISTRADOR>

@@ -95,10 +95,17 @@ docker exec -it <NOMBRE PROYECTO> bash
  * Ejecutar los comandos 
  
    ```shell
-    export TOBA_INSTANCIA=desarrollo    
+    export TOBA_INSTALACION_DIR=`pwd`/instalacion   
     bin/toba instalacion instalar
    ```     
    E indicar los valores para los parametros solicitados
+
+   Otra alternativa es renombrar el archivo parameters.yml.dist y completarlo con los valores pertinentes para los datos alli presentes, luego de ello podemos ejecutar lo siguiente:
+
+   ```shell
+    export TOBA_INSTALACION_DIR=`pwd`/instalacion   
+    bin/toba instalacion_silenciosa instalar --archivo_configuracion parameters.yml
+   ```
 
 ##Creación del proyecto
  * Ejecutar el comando
@@ -124,7 +131,7 @@ docker exec -it <NOMBRE PROYECTO> bash
  * Listo, el proyecto ya se puede acceder desde la url ```http://localhost/toba_editor/3.3```.  
     Las credenciales son las que haya incluido en los parametros solicitados
  
-    Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
+    Recomendamos en este punto crear el commit inicial en el VCS (Version Control System) elegido. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
     
     La estructura del proyecto Toba nuevo quedó en la raíz.
 
@@ -133,11 +140,22 @@ docker exec -it <NOMBRE PROYECTO> bash
 Por defecto la carpeta de instalación queda montada en la carpeta llamada ```instalacion``` en la raíz del proyecto.
 
 #### Comandos administrativos
-Para persistir las modificaciones realizadas con toba_editor, se recomienda correr los comandos administrativos en interacción con el CVS
-  * Ejecutar al abrir una nueva consola el comando 
+Para persistir las modificaciones realizadas con toba_editor, se recomienda correr los comandos administrativos en interacción con el VCS
+  * Ejecutar el lanzador de comandos para obtener un listado de opciones:
+    ```shell
+     bin/toba 
+    ```
+
+  * Otra opción es cargar primero las variables de entorno, para ello ejecutar al abrir una nueva consola el comando 
   
     ```shell
      . instalacion/entorno_toba.env
     ```
-  Luego de ello acceder normalmente a los comandos administrativos, mediante el comando lanzador `toba`. 
+    o en el caso de windows
+
+    ```shell
+     entorno_toba_version.bat
+    ```
+    
+  Luego de ello acceder normalmente a los comandos administrativos, mediante el comando lanzador `bin/toba`. 
   
