@@ -4,7 +4,8 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://satis.siu.edu.ar"
+      "url": "https://satis.siu.edu.ar",
+      "exclude": ["siu-toba/framework", "siu-toba/rest"]
     }
   ],
   "require": {
