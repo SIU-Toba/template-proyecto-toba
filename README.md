@@ -122,6 +122,11 @@ docker exec -it <NOMBRE PROYECTO> bash
  
    ```shell
     sudo a2ensite <NOMBRE PROYECTO>
+   ```   
+ * Activar el modulo de reescritura de Apache  
+ 
+   ```shell
+    sudo a2enmod rewrite
    ```
  * Reiniciar apache  
  
