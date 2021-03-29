@@ -107,7 +107,7 @@ docker exec -it <NOMBRE PROYECTO> bash
     bin/toba instalacion_silenciosa instalar --archivo_configuracion parameters.yml
    ```
 
-##Creación del proyecto
+## Creación del proyecto
  * Ejecutar el comando
  
    ```shell
