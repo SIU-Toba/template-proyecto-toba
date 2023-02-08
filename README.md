@@ -1,16 +1,8 @@
 # Creación de un nuevo proyecto Toba
 
-## Prerequisitos
- * Hay que tener instalado [Composer](https://getcomposer.org/)
- * Hay que tener instalado [Yarn](https://yarnpkg.com/) 
-
 ## Descarga
  * Descargar este proyecto como zip (botón verde 'clone or download'). Luego extraerlo dentro de una carpeta deseada
  * Modificar el archivo ```composer.json``` reemplazando la entrada ```name``` con lo que corresponda.
- * Ejecutar en la carpeta el comando  
-```shell
-composer install
-```
 
 ## Instalación y creación del proyecto con Docker
  * Instalar [Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/) y [Docker Compose](https://docs.docker.com/compose/install/)
@@ -24,6 +16,19 @@ docker-compose up -d
 ```shell
 docker exec -it <NOMBRE PROYECTO> bash
 ```
+ * Instalar Pre-requisitos usando las siguientes guias:
+   - [Composer](https://getcomposer.org/download/)
+   - [Yarn](https://classic.yarnpkg.com/en/docs/install#debian-stable) 
+   - [Git](https://git-scm.com/download/linux) 
+
+ * Ejecutar en la carpeta el comando  
+```shell
+composer install
+```
+* Ejecutar el comando y proveer los datos requeridos
+```shell
+bin/toba instalacion instalar
+```
  * Ejecutar el comando  
 ```shell
 bin/crear-proyecto.sh
@@ -32,12 +37,12 @@ bin/crear-proyecto.sh
 ```shell
 service apache2 reload
 ```
- * Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/3.3```.  
-    Las credenciales por defecto son ```toba:toba```
+  Listo, el proyecto ya se puede acceder desde la url ```http://localhost:7008/toba_editor/3.3```.  
+  Las credenciales por defecto son ```toba:toba```
  
-    Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
+  Recomendamos en este punto crear el commit inicial en el CVS. Si no se está usando Git hay que ignorar los directorios y archivos que se ecuentran en el archivo ```.gitignore```, si se utiliza Git no es necesario.  
     
-    La estructura del proyecto Toba nuevo quedó en la raíz.
+  La estructura del proyecto nuevo quedó en la raíz.
 
 ### Trabajando
 #### Permisos de los archivos
@@ -62,6 +67,9 @@ docker exec -it <NOMBRE PROYECTO> bash
  * Instalar [Postgres] (https://www.postgresql.org/download/linux/ubuntu/) o [manualmente] (https://www.postgresql.org/docs/current/static/install-procedure.html)
  * Instalar [Subversion](https://subversion.apache.org/packages.html) y/o [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
  * Instalar [Graphviz](http://graphviz.org/Download..php)
+ * Instalar [Composer](https://getcomposer.org/download/)
+ * Instalar [Yarn](https://classic.yarnpkg.com/en/docs/install#debian-stable) 
+ * Instalar [Git](https://git-scm.com/download/linux) 
  * Editar el/los archivos de configuracion de PHP(php.ini) de acuerdo a la plataforma y cambiar las siguientes configuraciones:
    ```
     #Mínimos
@@ -92,6 +100,10 @@ docker exec -it <NOMBRE PROYECTO> bash
     extension=zip.so
     extension=zlib.so        
    ```
+ * Ejecutar en la carpeta del proyecto el comando  
+  ```shell
+  composer install
+  ```   
  * Ejecutar los comandos 
  
    ```shell
