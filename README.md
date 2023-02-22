@@ -23,6 +23,7 @@ docker exec -it <NOMBRE PROYECTO> bash
 
  * Ejecutar en la carpeta el comando  
 ```shell
+cd /var/local/<NOMBRE PROYECTO>
 composer install
 ```
 * Ejecutar el comando y proveer los datos requeridos
