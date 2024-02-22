@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "siu-toba/framework": "~3.3"
+    "siu-toba/framework": "~3.4"
   },
   "config": {
      "bin-dir": "./bin" 
